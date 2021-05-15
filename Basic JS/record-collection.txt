@@ -1,0 +1,51 @@
+// Setup
+var recordCollection = {
+  2548: {
+    albumTitle: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+  },
+  2468: {
+    albumTitle: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette']
+  },
+  1245: {
+    artist: 'Robert Palmer',
+    tracks: []
+  },
+  5439: {
+    albumTitle: 'ABBA Gold'
+  }
+};
+
+// Only change code below this line
+function updateRecords(records, id, prop, value) {
+  if (prop!="tracks" && value!="") {
+    console.log("ID: " + id + " - updating " + prop + " to " + value);
+    records[id][prop]=value;
+  }
+  else if (prop=="tracks") {
+    console.log("Updating tracks for: " + value);
+    if (!records[id].tracks) {
+      console.log("ID: " + id + " - no tracks, creating new array for " + value);
+      records[id].tracks = [];
+    }
+    if (value=="") {
+      console.log ("empty string!");
+    }
+    if (value!="") {
+      records[id].tracks.push(value);
+      console.log("ID: " + id + " - adding track: " + value);
+      console.log("ID: " + " - tracks array after adding " + records[id].tracks);
+      console.log(records[id].tracks);
+    }
+  }
+  if (value==="") {
+    console.log("ID: " + id + " - deleting prop: " + prop);
+    delete records[id][prop];
+  }
+  return records;
+}
+
+updateRecords(recordCollection, 5439, 'artist', 'ABBA');
