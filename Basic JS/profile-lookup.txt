@@ -1,0 +1,50 @@
+// Setup
+var contacts = [
+    {
+        "firstName": "Akira",
+        "lastName": "Laine",
+        "number": "0543236543",
+        "likes": ["Pizza", "Coding", "Brownie Points"]
+    },
+    {
+        "firstName": "Harry",
+        "lastName": "Potter",
+        "number": "0994372684",
+        "likes": ["Hogwarts", "Magic", "Hagrid"]
+    },
+    {
+        "firstName": "Sherlock",
+        "lastName": "Holmes",
+        "number": "0487345643",
+        "likes": ["Intriguing Cases", "Violin"]
+    },
+    {
+        "firstName": "Kristian",
+        "lastName": "Vos",
+        "number": "unknown",
+        "likes": ["JavaScript", "Gaming", "Foxes"]
+    }
+];
+
+
+function lookUpProfile(name, prop){
+// Only change code below this line
+    console.log("*** Searching: " + name + ": " + prop + " ***");
+    const found = contacts.find(x => x.firstName === name);
+    if (found) {
+        console.log("found: " + name);
+        if (found[prop]) {
+            console.log(name + " has prop " + prop);
+            return found[prop];
+        } else {
+            console.log(name + " doesn't have prop " + prop);
+            return "No such property"
+        }
+    } else {
+        console.log(name + " not found.");
+        return "No such contact";
+    }
+// Only change code above this line
+}
+
+lookUpProfile("Akira", "likes");
