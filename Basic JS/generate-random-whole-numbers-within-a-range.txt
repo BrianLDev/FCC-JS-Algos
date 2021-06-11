@@ -1,0 +1,12 @@
+function randomRange(myMin, myMax) {
+  // Only change code below this line
+  var myDiff = myMax-myMin+1;
+  console.log(myMin + ":" + myMax + " = " + myDiff);
+  myDiff = Math.floor(myMin + (myDiff * Math.random()));
+  console.log(myDiff);
+  if (myDiff > myMax) {
+    console.log("error, too large");
+  }
+  return myDiff;
+  // Only change code above this line
+}
