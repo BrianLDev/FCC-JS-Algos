@@ -1,0 +1,7 @@
+// ORIGINAL
+// let magic = funcction() {
+//   return new Date();
+// };
+
+// ARROW FUNCTION
+const magic = () => new Date();
