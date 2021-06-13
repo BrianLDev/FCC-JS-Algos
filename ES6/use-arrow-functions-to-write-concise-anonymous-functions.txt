@@ -5,3 +5,4 @@
 
 // ARROW FUNCTION
 const magic = () => new Date();
+
