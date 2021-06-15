@@ -1,8 +1,7 @@
 // ORIGINAL
-// let magic = funcction() {
+// varr magic = funcction() {
 //   return new Date();
 // };
 
 // ARROW FUNCTION
 const magic = () => new Date();
-
